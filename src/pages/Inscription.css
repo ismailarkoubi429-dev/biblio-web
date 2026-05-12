@@ -1,0 +1,103 @@
+.inscription-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.inscription-form {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.15);
+  width: 100%;
+  max-width: 450px;
+  animation: fadeIn 0.7s ease;
+}
+
+.inscription-form h2 {
+  text-align: center;
+  color: #7c3aed;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.inscription-form .champ-groupe {
+  margin-bottom: 1.3rem;
+}
+
+.inscription-form label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.inscription-form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+}
+
+.inscription-form input:focus {
+  outline: none;
+  border-color: #7c3aed;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.inscription-form input.champ-erreur {
+  border-color: #ef4444;
+}
+
+.message-succes {
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.bouton-inscription {
+  width: 100%;
+  padding: 0.85rem;
+  background: #fbbf24;
+  color: #78350f;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.bouton-inscription:hover {
+  background: #f59e0b;
+  transform: translateY(-1px);
+}
+
+.lien-connexion {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.lien-connexion a {
+  color: #7c3aed;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lien-connexion a:hover {
+  text-decoration: underline;
+}

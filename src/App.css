@@ -1,0 +1,28 @@
+/* Styles globaux de l'application BiblioApp */
+
+body, .App {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%);
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Contenu principal centré sous la navbar fixe */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 20px 20px 20px;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+}
+
+/* Animation d'apparition douce */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

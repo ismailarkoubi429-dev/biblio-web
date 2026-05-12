@@ -1,0 +1,77 @@
+.accueil-container {
+  max-width: 700px;
+  width: 100%;
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.15);
+  text-align: center;
+  animation: fadeIn 0.7s ease;
+}
+
+.accueil-titre {
+  font-size: 2.5rem;
+  color: #7c3aed;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.accueil-sousTitre {
+  font-size: 1.3rem;
+  color: #fbbf24;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.accueil-texte {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accueil-boutons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-principal {
+  background: #7c3aed;
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-principal:hover {
+  background: #6d28d9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.btn-secondaire {
+  background: #fbbf24;
+  color: #78350f;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondaire:hover {
+  background: #f59e0b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+}

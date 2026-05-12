@@ -1,0 +1,21 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dépendances
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editeur
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
