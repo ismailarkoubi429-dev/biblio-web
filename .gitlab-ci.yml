@@ -1,0 +1,42 @@
+# ============================================================
+# PIPELINE GITLAB CI — BiblioApp React.js
+# Ce fichier est exécuté automatiquement à chaque push
+# Il installe les dépendances et lance tous les tests
+# ============================================================
+
+# Image Docker utilisée : Node.js version 20 (LTS)
+image: node:20
+
+# Définition des étapes du pipeline dans l'ordre d'exécution
+stages:
+  - test
+
+# ─── Variables globales ──────────────────────────────────────
+variables:
+  # Désactive les avertissements npm inutiles dans les logs CI
+  NPM_CONFIG_LOGLEVEL: warn
+
+# ─── Cache des dépendances ───────────────────────────────────
+# Evite de télécharger node_modules à chaque pipeline (gain de temps)
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+# ─── JOB : Exécution des tests ───────────────────────────────
+tests:unitaires-et-integration:
+  stage: test
+  script:
+    # 1. Installe les dépendances de manière propre et reproductible
+    - npm ci
+    # 2. Lance tous les tests (unitaires + intégration) une seule fois
+    - npm test
+  # Artifacts : conserve les rapports générés même si le job échoue
+  artifacts:
+    when: always
+    paths:
+      - coverage/
+    expire_in: 7 days
+  # Règle : s'exécute sur TOUTES les branches à chaque push
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push"'
